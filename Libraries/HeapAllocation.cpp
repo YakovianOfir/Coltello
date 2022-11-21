@@ -1,5 +1,4 @@
 #include "HeapAllocation.hpp"
-#include "SystemNatives.hpp"
 #include "Exception.hpp"
 #include "Protect.hpp"
 

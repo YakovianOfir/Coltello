@@ -4,7 +4,7 @@
 
 namespace Coltello::Infra
 {
-	EtwSession::EtwSession(GUID& traceGuid, PWCHAR traceName): 
+	EtwSession::EtwSession(GUID traceGuid, PWCHAR traceName): 
 		_sessionDescriptor(DescriptorStorageSize(traceName)),
 		_session(INVALID_PROCESSTRACE_HANDLE)
 	{
@@ -29,8 +29,13 @@ namespace Coltello::Infra
 	{
 		PROTECT_DESTRUCTOR(
 		{
-			Control(EVENT_TRACE_CONTROL_STOP);
+			Stop();
 		})
+	}
+	
+	void EtwSession::Stop()
+	{
+		Control(EVENT_TRACE_CONTROL_STOP);
 	}
 	
 	void EtwSession::Control(ULONG controlCode)

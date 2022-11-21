@@ -6,7 +6,7 @@
 //
 //   Module Name:
 //
-//      | VirtualAllocation.hpp |
+//      | ColtelloUserMemory.hpp |
 //
 //   Author:
 //
@@ -18,26 +18,22 @@
 //
 /////////////////////////////////////////////////////////////////
 
-#include "Buffer.hpp"
-#include "Handle.hpp"
+#include "Coltello.hpp"
 
-namespace Coltello::Infra
+namespace Coltello
 {
-	class VirtualAllocation final : public NonCopyable
+	class ColtelloUserMemory final : public Infra::NonCopyable
 	{
 		public:
-			explicit VirtualAllocation(ULONG size);
-			virtual ~VirtualAllocation();
+			explicit ColtelloUserMemory();
 
 		public:
-			ULONG Size();
-			PVOID Address();
-
-		public:
-			void Write(const Buffer& data);
+			Infra::VirtualAllocation& Region();
 
 		private:
-			ULONG _regionSize;
-			PVOID _regionAddress;
+			static ULONG FetchMagicAllocationSize();
+
+		private:
+			Infra::VirtualAllocation _userRegion;
 	};
 }

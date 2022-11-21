@@ -41,3 +41,6 @@
 #include "HeapAllocation.hpp"
 #include "AnonymousPipe.hpp"
 #include "BigPoolInformation.hpp"
+#include "EtwSession.hpp"
+#include "EtwConsumer.hpp"
+#include "GdiFont.hpp"

@@ -31,7 +31,6 @@
 #include <string>
 #include <fmt\core.h>
 #include <fmt\format.h>
-#include "SystemNatives.hpp"
 
 namespace Coltello::Infra
 {

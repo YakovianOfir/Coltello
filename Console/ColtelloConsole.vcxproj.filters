@@ -13,10 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Execute">
+      <UniqueIdentifier>{5d17f247-102f-4a1b-84ae-ca9b28ae4591}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Execute">
+      <UniqueIdentifier>{f974d022-1dd1-4d66-82d9-a30d71dc4fa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Main">
+      <UniqueIdentifier>{96744a5e-e481-4aa0-ab89-680a9d32e01a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Main">
+      <UniqueIdentifier>{67718ec4-cfff-4edc-895b-7c52c96293a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ColtelloConsole.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ColtelloKernelMemory.cpp">
+      <Filter>Source Files\Execute</Filter>
     </ClCompile>
+    <ClCompile Include="ColtelloUserMemory.cpp">
+      <Filter>Source Files\Execute</Filter>
+    </ClCompile>
+    <ClCompile Include="Coltello.cpp">
+      <Filter>Source Files\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="ColtelloExecutePrimitive.cpp">
+      <Filter>Source Files\Execute</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ColtelloExecutePrimitive.hpp">
+      <Filter>Header Files\Execute</Filter>
+    </ClInclude>
+    <ClInclude Include="ColtelloKernelMemory.hpp">
+      <Filter>Header Files\Execute</Filter>
+    </ClInclude>
+    <ClInclude Include="ColtelloUserMemory.hpp">
+      <Filter>Header Files\Execute</Filter>
+    </ClInclude>
+    <ClInclude Include="Coltello.hpp">
+      <Filter>Header Files\Main</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

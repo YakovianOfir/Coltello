@@ -5,14 +5,15 @@
 
 namespace Coltello::Infra
 {
-	EtwConsumer::EtwConsumer(PWCHAR traceName, CallbackDescriptor& callback): 
+	EtwConsumer::EtwConsumer(PWCHAR traceName, EtwConsumerCallback_t callback, PVOID context):
 		_consumer(INVALID_PROCESSTRACE_HANDLE),
-		_callback(callback)
+		_callback(callback),
+		_context(context)
 	{
 		EVENT_TRACE_LOGFILEW logFile = {};
 
 		logFile.LoggerName = traceName;
-		logFile.ProcessTraceMode = PROCESS_TRACE_MODE_REAL_TIME |PROCESS_TRACE_MODE_EVENT_RECORD;
+		logFile.ProcessTraceMode = PROCESS_TRACE_MODE_REAL_TIME | PROCESS_TRACE_MODE_EVENT_RECORD;
 		logFile.EventRecordCallback = InternalConsumerCallback;
 		logFile.Context = (PVOID) (this);
 
@@ -45,9 +46,7 @@ namespace Coltello::Infra
 			
 			COLTELLO_ASSERT(etwConsumer != nullptr);
 
-			auto * etwCallback = &etwConsumer->_callback;
-
-			etwCallback->consumerCallback(eventRecord);
+			etwConsumer->_callback(etwConsumer->_context, eventRecord);
 		})
 	}
 }

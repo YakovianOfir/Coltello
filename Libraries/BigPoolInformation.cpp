@@ -1,5 +1,4 @@
 #include "BigPoolInformation.hpp"
-#include "SystemNatives.hpp"
 #include "Exception.hpp"
 #include "Assert.hpp"
 
@@ -17,7 +16,7 @@ namespace Coltello::Infra
 			"Cannot capture big pool allocations.");
 	}
 
-	PVOID BigPoolInformation::Locate(ULONG tag, ULONG allocationSize, ULONG entrySize)
+	PVOID BigPoolInformation::Locate(ULONG allocationSize, ULONG entrySize, ULONG poolTag)
 	{
 		ULONG_PTR resultAddress = 0;
 
@@ -25,7 +24,7 @@ namespace Coltello::Infra
 		{
 			PSYSTEM_BIGPOOL_ENTRY entry = &AsNative()->AllocatedInfo[i];
 			
-			if (entry->TagUlong != tag)
+			if (entry->TagUlong != poolTag)
 			{
 				continue;
 			}

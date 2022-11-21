@@ -49,6 +49,9 @@
     <ClCompile Include="EtwConsumer.cpp">
       <Filter>ETW</Filter>
     </ClCompile>
+    <ClCompile Include="GdiFont.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ILock.hpp">
@@ -126,6 +129,9 @@
     <ClInclude Include="EtwConsumer.hpp">
       <Filter>ETW</Filter>
     </ClInclude>
+    <ClInclude Include="GdiFont.hpp">
+      <Filter>Graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Synchronization">
@@ -157,6 +163,9 @@
     </Filter>
     <Filter Include="ETW">
       <UniqueIdentifier>{f59bdf25-03e1-40a4-8570-4a9b96f7f49b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{f5ed25bd-473b-497b-a606-c2ac4ec12e1d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

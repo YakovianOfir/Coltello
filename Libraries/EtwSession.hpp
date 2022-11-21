@@ -26,10 +26,11 @@ namespace Coltello::Infra
 	class EtwSession final : public NonCopyable
 	{
 		public:
-			explicit EtwSession(GUID& traceGuid, PWCHAR traceName);
+			explicit EtwSession(GUID traceGuid, PWCHAR traceName);
 			virtual ~EtwSession();
 
 		public:
+			void Stop();
 			void Control(ULONG controlCode);
 			void SetInformation(TRACE_INFO_CLASS category, Buffer& data);
 

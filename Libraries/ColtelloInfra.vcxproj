@@ -91,6 +91,7 @@
     <ClInclude Include="EtwSession.hpp" />
     <ClInclude Include="Exception.hpp" />
     <ClInclude Include="Flags.hpp" />
+    <ClInclude Include="GdiFont.hpp" />
     <ClInclude Include="Handle.hpp" />
     <ClInclude Include="HeapAllocation.hpp" />
     <ClInclude Include="ILock.hpp" />
@@ -116,6 +117,7 @@
     <ClCompile Include="EtwConsumer.cpp" />
     <ClCompile Include="EtwSession.cpp" />
     <ClCompile Include="Exception.cpp" />
+    <ClCompile Include="GdiFont.cpp" />
     <ClCompile Include="Handle.cpp" />
     <ClCompile Include="HeapAllocation.cpp" />
     <ClCompile Include="ImpersonationScope.cpp" />

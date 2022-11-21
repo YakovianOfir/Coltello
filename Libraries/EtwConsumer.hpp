@@ -23,15 +23,12 @@
 
 namespace Coltello::Infra
 {
+	typedef void (__stdcall * EtwConsumerCallback_t)(PVOID context, PEVENT_RECORD record);
+
 	class EtwConsumer final : public NonCopyable
 	{
-		struct CallbackDescriptor
-		{
-			PEVENT_RECORD_CALLBACK consumerCallback;
-		};
-
 		public:
-			explicit EtwConsumer(PWCHAR traceName, CallbackDescriptor& callback);
+			explicit EtwConsumer(PWCHAR traceName, EtwConsumerCallback_t callback, PVOID context);
 			virtual ~EtwConsumer();
 
 		public:
@@ -42,6 +39,7 @@ namespace Coltello::Infra
 
 		private:
 			TRACEHANDLE _consumer;
-			CallbackDescriptor _callback;
+			EtwConsumerCallback_t _callback;
+			PVOID _context;
 	};
 }

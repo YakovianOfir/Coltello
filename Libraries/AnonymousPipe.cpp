@@ -3,7 +3,7 @@
 
 namespace Coltello::Infra
 {
-	AnonymousPipe::AnonymousPipe(ULONG bufferSize)
+	AnonymousPipe::AnonymousPipe(ULONG bufferSize): _storageSize(bufferSize)
 	{
 		CHECK_BOOLEAN(::CreatePipe(
 			_readEndpoint.Reference(), 
@@ -12,13 +12,22 @@ namespace Coltello::Infra
 			"Cannot create pipe.");
 	}
 
-	void AnonymousPipe::Write(const Buffer& data)
+	void AnonymousPipe::Write(PVOID dataAddress, ULONG dataSize)
 	{
 		CHECK_BOOLEAN(::WriteFile(
-			_writeEndpoint.Get(), 
-			(PVOID) data.data(), 
-			(DWORD) data.size(), 
-			NULL, NULL), 
+			_writeEndpoint.Get(),
+			dataAddress, dataSize,
+			NULL, NULL),
 			"Cannot write to pipe.");
+	}
+
+	void AnonymousPipe::Write(const Buffer& data)
+	{
+		Write((PVOID) data.data(), (ULONG) data.size());
+	}
+
+	ULONG AnonymousPipe::StorageSize() const
+	{
+		return _storageSize;
 	}
 }

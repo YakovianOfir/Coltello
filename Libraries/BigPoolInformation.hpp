@@ -28,7 +28,7 @@ namespace Coltello::Infra
 			explicit BigPoolInformation();
 
 		public:
-			PVOID Locate(ULONG tag, ULONG allocationSize, ULONG entrySize);
+			PVOID Locate(ULONG allocationSize, ULONG entrySize, ULONG poolTag);
 
 		private:
 			PSYSTEM_BIGPOOL_INFORMATION AsNative();

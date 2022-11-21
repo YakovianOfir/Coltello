@@ -6,7 +6,7 @@
 //
 //   Module Name:
 //
-//      | AnonymousPipe.hpp |
+//      | GdiFont.hpp |
 //
 //   Author:
 //
@@ -18,26 +18,23 @@
 //
 /////////////////////////////////////////////////////////////////
 
-#include "Handle.hpp"
-#include "Buffer.hpp"
+#include "SystemIncludes.hpp"
+#include "NonCopyable.hpp"
+#include <string>
 
 namespace Coltello::Infra
 {
-	class AnonymousPipe final : public NonCopyable
+	class FontOverwriteScope final : public NonCopyable
 	{
 		public:
-			explicit AnonymousPipe(ULONG bufferSize);
+			explicit FontOverwriteScope(PWCHAR path);
+			virtual ~FontOverwriteScope();
 
 		public:
-			ULONG StorageSize() const;
-
-		public:
-			void Write(PVOID address, ULONG size);
-			void Write(const Buffer& data);
+			static void AddResource(PWCHAR path);
+			static void RemoveResource(PWCHAR path);
 
 		private:
-			ULONG _storageSize;
-			Handle _readEndpoint;
-			Handle _writeEndpoint;
+			std::wstring _targetFontPath;
 	};
 }
