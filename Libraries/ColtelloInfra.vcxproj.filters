@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="LockBase.cpp">
+      <Filter>Synchronization</Filter>
+    </ClCompile>
+    <ClCompile Include="Locker.cpp">
+      <Filter>Synchronization</Filter>
+    </ClCompile>
+    <ClCompile Include="Exception.cpp">
+      <Filter>Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Trace.cpp">
+      <Filter>Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Mutex.cpp">
+      <Filter>Synchronization</Filter>
+    </ClCompile>
+    <ClCompile Include="Handle.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessSnapshot.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpersonationScope.cpp">
+      <Filter>Security</Filter>
+    </ClCompile>
+    <ClCompile Include="PrivilegesScope.cpp">
+      <Filter>Security</Filter>
+    </ClCompile>
+    <ClCompile Include="Section.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="VirtualAllocation.cpp">
+      <Filter>Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="HeapAllocation.cpp">
+      <Filter>Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="AnonymousPipe.cpp">
+      <Filter>I/O</Filter>
+    </ClCompile>
+    <ClCompile Include="BigPoolInformation.cpp">
+      <Filter>Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="EtwSession.cpp">
+      <Filter>ETW</Filter>
+    </ClCompile>
+    <ClCompile Include="EtwConsumer.cpp">
+      <Filter>ETW</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ILock.hpp">
+      <Filter>Synchronization</Filter>
+    </ClInclude>
+    <ClInclude Include="LockBase.hpp">
+      <Filter>Synchronization</Filter>
+    </ClInclude>
+    <ClInclude Include="Locker.hpp">
+      <Filter>Synchronization</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.hpp">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="NonCopyable.hpp">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Trace.hpp">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Assert.hpp">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Flags.hpp">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Protect.hpp">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Mutex.hpp">
+      <Filter>Synchronization</Filter>
+    </ClInclude>
+    <ClInclude Include="Handle.hpp">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ColtelloInfra.hpp">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessSnapshot.hpp">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpersonationScope.hpp">
+      <Filter>Security</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivilegesScope.hpp">
+      <Filter>Security</Filter>
+    </ClInclude>
+    <ClInclude Include="Section.hpp">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="VirtualAllocation.hpp">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="HeapAllocation.hpp">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="AnonymousPipe.hpp">
+      <Filter>I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffer.hpp">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="BigPoolInformation.hpp">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemIncludes.hpp">
+      <Filter>Definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemNatives.hpp">
+      <Filter>Definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="EtwSession.hpp">
+      <Filter>ETW</Filter>
+    </ClInclude>
+    <ClInclude Include="EtwConsumer.hpp">
+      <Filter>ETW</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Synchronization">
+      <UniqueIdentifier>{6d8e0664-f09d-4f04-ba03-fc82de446025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{918606a9-9b02-43f9-9159-e3b6f7a9883c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{5cab31ca-9486-47db-9880-211ab3972e4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packages">
+      <UniqueIdentifier>{ab1b2b3a-2379-4519-9818-d7cbc450edee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{5052b2dc-182f-41ea-ba94-09b48fc11cd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Security">
+      <UniqueIdentifier>{3de133e0-e2cd-4fd9-bbd9-2feba9ecf71c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory">
+      <UniqueIdentifier>{108996bb-a80c-46b4-b8ac-c9fa60cf8e86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="I/O">
+      <UniqueIdentifier>{05e1c14f-35c3-42c3-b765-2edf8f06cc09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Definitions">
+      <UniqueIdentifier>{0006d292-3ee3-4f39-abed-fd255fb22ad0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ETW">
+      <UniqueIdentifier>{f59bdf25-03e1-40a4-8570-4a9b96f7f49b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Packages.config">
+      <Filter>Packages</Filter>
+    </None>
+  </ItemGroup>
+</Project>
